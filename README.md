@@ -5,9 +5,9 @@
 Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente através de princípios básicos de Programação Orientada ao Objeto a partir da linguagem de programação Java.
 *This work refers to a project of a RPG game entirely made through basic principles of Oriented to Object Programming by the programmming language Java*.
 
-# Diretório/*Directory*
-
-# Java RPG (nome do seu projeto)
+## Diretório/*Directory*
+`
+# Java RPG 
 
 - **src/**
   - `Main.java`
@@ -30,4 +30,5 @@ Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente atrav�
 - `build.xml` (arquivo de configuração do Apache Ant, se aplicável)
 
 - `README.md` (arquivo de documentação do projeto, opcional)
-
+`
+  
