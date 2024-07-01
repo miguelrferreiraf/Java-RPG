@@ -39,7 +39,7 @@ public class Main {
             // Loop para permitir que cada personagem faça sua ação
             for (Personagem personagem : jogo.getJogadores()) {
                 if (personagem.getPontosVida() > 0) {
-                    System.out.println("Jogador, é sua vez. O que você deseja fazer?");
+                    System.out.println(personagem.getNome() + ", é sua vez.");
                     System.out.println("1 - Atacar");
                     System.out.println("2 - Usar habilidade (se disponível)");
 
@@ -50,7 +50,7 @@ public class Main {
                             Personagem alvo = jogo.selecionarAlvo(personagem);
                             if (alvo != null) {
                                 personagem.atacar(alvo);
-                                System.out.println(personagem.getNome() + " atacou " + alvo.getNome() + "!");
+                                System.out.println(personagem.getNome() + " atacou " + alvo.getNome() + " e causou " + personagem.calcularDano(alvo) + " de dano!");
                             }
                             break;
                         case 2:

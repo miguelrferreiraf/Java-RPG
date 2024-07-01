@@ -1,13 +1,9 @@
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Batalha {
     private ArrayList<Personagem> personagens;
 
     public Batalha(ArrayList<Personagem> personagens) {
-        if (personagens.isEmpty()) {
-            throw new IllegalArgumentException("A lista de personagens não pode estar vazia.");
-        }
         this.personagens = personagens;
     }
 
@@ -15,7 +11,7 @@ public class Batalha {
         for (Personagem personagem : personagens) {
             if (personagem.getPontosVida() > 0) {
                 Personagem alvo = selecionarAlvo(personagem);
-                if (alvo != null) {
+                if (alvo != null && alvo.getPontosVida() > 0) {
                     personagem.atacar(alvo);
                     System.out.println(personagem.getNome() + " atacou " + alvo.getNome() + " e causou " + personagem.calcularDano(alvo) + " de dano.");
                     if (alvo.getPontosVida() <= 0) {
@@ -30,7 +26,7 @@ public class Batalha {
         for (Personagem personagem : personagens) {
             if (personagem instanceof Inimigo && personagem.getPontosVida() > 0) {
                 Personagem alvo = selecionarAlvo(personagem);
-                if (alvo != null) {
+                if (alvo != null && alvo.getPontosVida() > 0) {
                     personagem.atacar(alvo);
                     System.out.println(personagem.getNome() + " atacou " + alvo.getNome() + " e causou " + personagem.calcularDano(alvo) + " de dano.");
                     if (alvo.getPontosVida() <= 0) {
@@ -42,12 +38,7 @@ public class Batalha {
     }
 
     private Personagem selecionarAlvo(Personagem personagem) {
-        ArrayList<Personagem> todosPersonagens = new ArrayList<>();
-        todosPersonagens.addAll(personagens);
-
-        // Selecionar aleatoriamente um alvo que não seja o próprio personagem
-        Collections.shuffle(todosPersonagens);
-        for (Personagem alvo : todosPersonagens) {
+        for (Personagem alvo : personagens) {
             if (alvo != personagem && alvo.getPontosVida() > 0) {
                 return alvo;
             }
