@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Jogo {
     private ArrayList<Personagem> jogadores;
@@ -16,11 +17,6 @@ public class Jogo {
         jogadores.add(guerreiro);
         jogadores.add(mago);
         jogadores.add(arqueiro);
-
-        System.out.println("Personagens criados:");
-        for (Personagem personagem : jogadores) {
-            System.out.println("- " + personagem.getNome());
-        }
     }
 
     public void criarInimigos() {
@@ -28,11 +24,6 @@ public class Jogo {
         Inimigo chefe = new Inimigo("Chefe", 120, 25, 20, "Chefe", 100);
         inimigos.add(monstro);
         inimigos.add(chefe);
-
-        System.out.println("Inimigos criados:");
-        for (Inimigo inimigo : inimigos) {
-            System.out.println("- " + inimigo.getNome() + " (Tipo: " + inimigo.getTipo() + ")");
-        }
     }
 
     public void iniciarBatalha() {
@@ -40,9 +31,76 @@ public class Jogo {
         todosPersonagens.addAll(jogadores);
         todosPersonagens.addAll(inimigos);
         Batalha batalha = new Batalha(todosPersonagens);
+
+        Scanner scanner = new Scanner(System.in);
+
         for (int i = 0; i < 3; i++) {
-            batalha.realizarTurno();
+            for (Personagem personagem : jogadores) {
+                if (personagem.getPontosVida() > 0) {
+                    System.out.println(personagem.getNome() + ", escolha uma ação: ");
+                    System.out.println("1. Atacar");
+                    System.out.println("2. Usar Habilidade");
+
+                    int escolha = scanner.nextInt();
+
+                    switch (escolha) {
+                        case 1:
+                            Personagem alvo = selecionarAlvo(personagem);
+                            if (alvo != null) {
+                                personagem.atacar(alvo);
+                                System.out.println(personagem.getNome() + " atacou " + alvo.getNome() + "!");
+                            }
+                            break;
+                        case 2:
+                            System.out.println("Escolha uma habilidade:");
+                            for (int j = 0; j < personagem.getHabilidades().size(); j++) {
+                                Habilidade habilidade = personagem.getHabilidades().get(j);
+                                System.out.println((j + 1) + ". " + habilidade.getNome() + " - Tipo: " + habilidade.getTipo() + ", Dano Base: " + habilidade.getDanoBase());
+                            }
+                            int escolhaHabilidade = scanner.nextInt();
+                            if (escolhaHabilidade > 0 && escolhaHabilidade <= personagem.getHabilidades().size()) {
+                                Habilidade habilidade = personagem.getHabilidades().get(escolhaHabilidade - 1);
+                                alvo = selecionarAlvo(personagem);
+                                if (alvo != null) {
+                                    int dano = habilidade.getDanoBase();
+                                    alvo.receberDano(dano);
+                                    System.out.println(personagem.getNome() + " usou " + habilidade.getNome() + " em " + alvo.getNome() + " causando " + dano + " de dano!");
+                                }
+                            } else {
+                                System.out.println("Escolha inválida.");
+                            }
+                            break;
+                        default:
+                            System.out.println("Escolha inválida.");
+                            break;
+                    }
+                }
+            }
+            realizarTurnoInimigos();
         }
+        scanner.close();
+    }
+
+    public Personagem selecionarAlvo(Personagem personagem) {
+        ArrayList<Personagem> todosPersonagens = new ArrayList<>();
+        todosPersonagens.addAll(jogadores);
+        todosPersonagens.addAll(inimigos);
+
+        for (Personagem alvo : todosPersonagens) {
+            if (alvo != personagem && alvo.getPontosVida() > 0) {
+                return alvo;
+            }
+        }
+        return null;
+    }
+
+    public void realizarTurnoInimigos() {
+        ArrayList<Personagem> todosPersonagens = new ArrayList<>();
+        todosPersonagens.addAll(jogadores);
+        todosPersonagens.addAll(inimigos);
+
+        Batalha batalha = new Batalha(todosPersonagens);
+        batalha.realizarTurnoInimigos();
     }
 
     public ArrayList<Personagem> getJogadores() {
@@ -61,4 +119,3 @@ public class Jogo {
         this.inimigos = inimigos;
     }
 }
-
