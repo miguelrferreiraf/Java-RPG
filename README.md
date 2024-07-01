@@ -6,9 +6,9 @@ Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente atrav�
 *This work refers to a project of a RPG game entirely made through basic principles of Oriented to Object Programming by the programmming language Java*.
 
 ## Diretório/*Directory*
-`
-projeto-rpg/   (nome do seu projeto)
-|
+Java RPG/  
+|-- .idea/
+|-- out/   (diretório onde os arquivos compilados são armazenados)
 |-- src/
 |   |-- Main.java
 |   |-- Personagem.java
@@ -21,12 +21,6 @@ projeto-rpg/   (nome do seu projeto)
 |   |-- Batalha.java
 |   |-- Jogo.java
 |
-|-- out/   (diretório onde os arquivos compilados são armazenados)
-|
-|-- .idea/   (diretório do IntelliJ com configurações do projeto)
-|-- projeto-rpg.iml   (arquivo de descrição do projeto para o IntelliJ)
-|-- out/   (diretório onde os arquivos compilados são armazenados)
-|-- build.xml   (arquivo de configuração do Apache Ant, se aplicável)
-|-- README.md   (arquivo de documentação do projeto, opcional)
-
-`
+|-- .gitignore (arquivo de descrição do projeto para o IntelliJ)
+|-- Java RPG.iml   
+|-- README.md   
