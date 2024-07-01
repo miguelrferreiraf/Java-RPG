@@ -10,9 +10,13 @@ Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente atrav�
 
 `
 Java RPG/  
+
 |-- .idea/
+
 |-- out/   (diretório onde os arquivos compilados são armazenados)
+
 |-- src/
+
 |   |-- Main.java
 |   |-- Personagem.java
 |   |-- Guerreiro.java
