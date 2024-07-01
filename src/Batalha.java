@@ -1,9 +1,13 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Batalha {
     private ArrayList<Personagem> personagens;
 
     public Batalha(ArrayList<Personagem> personagens) {
+        if (personagens.isEmpty()) {
+            throw new IllegalArgumentException("A lista de personagens não pode estar vazia.");
+        }
         this.personagens = personagens;
     }
 
@@ -38,7 +42,12 @@ public class Batalha {
     }
 
     private Personagem selecionarAlvo(Personagem personagem) {
-        for (Personagem alvo : personagens) {
+        ArrayList<Personagem> todosPersonagens = new ArrayList<>();
+        todosPersonagens.addAll(personagens);
+
+        // Selecionar aleatoriamente um alvo que não seja o próprio personagem
+        Collections.shuffle(todosPersonagens);
+        for (Personagem alvo : todosPersonagens) {
             if (alvo != personagem && alvo.getPontosVida() > 0) {
                 return alvo;
             }

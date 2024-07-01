@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class Jogo {
     private ArrayList<Personagem> jogadores;
@@ -98,6 +99,8 @@ public class Jogo {
         todosPersonagens.addAll(jogadores);
         todosPersonagens.addAll(inimigos);
 
+        // Selecionar aleatoriamente um alvo que não seja o próprio personagem
+        Collections.shuffle(todosPersonagens);
         for (Personagem alvo : todosPersonagens) {
             if (alvo != personagem && alvo.getPontosVida() > 0) {
                 return alvo;
