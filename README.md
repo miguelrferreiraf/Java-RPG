@@ -3,13 +3,15 @@ by Miguel Ferreira
 
 prof.: Rannyer Thom (T-Academy)
 
-Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente através de princípios básicos de Programação Orientada ao Objeto a partir da linguagem de programação Java.
+Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente através de princípios básicos de Programação Orientada ao Objeto a partir da linguagem de programação Java. Este trabalho foi feito para o processo seletivo disponibilizado pela T-Academy (T-Systems), em parceria com a ProWay.
 
-*This work refers to a project of a RPG game entirely made through basic principles of Oriented to Object Programming by the programmming language Java*.
+*This work refers to a project of a RPG game entirely made through basic principles of Objected-oriented Programming by the programmming language Java. This work was made for the selection process available by T-Academy (T-Systems), in partnership with ProWay*.
 
 (01/07/2024)
 
 ## Diretório/*Directory*
+
+O arquivo `Main.java` coordena o uso das classes, que são todos os outros arquivos abaixo deste.
 
 ```
 Java RPG/  
@@ -23,7 +25,7 @@ Java RPG/
 |   |-- Arqueiro.java
 |   |-- Inimigo.java
 |   |-- Habilidade.java
-|   |-- Efeito.java
+|   |-- Efeito.java //Desafio da coordenação
 |   |-- Batalha.java
 |   |-- Jogo.java
 |
