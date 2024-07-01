@@ -3,11 +3,11 @@ by Miguel Ferreira
 
 prof.: Rannyer Thom (T-Academy)
 
-01/07/2024
-
 Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente através de princípios básicos de Programação Orientada ao Objeto a partir da linguagem de programação Java.
 
 *This work refers to a project of a RPG game entirely made through basic principles of Oriented to Object Programming by the programmming language Java*.
+
+(01/07/2024)
 
 ## Diretório/*Directory*
 
