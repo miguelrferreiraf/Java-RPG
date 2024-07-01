@@ -25,7 +25,7 @@ Java RPG/
 |   |-- Arqueiro.java
 |   |-- Inimigo.java
 |   |-- Habilidade.java
-|   |-- Efeito.java //Pedido da coordenação
+|   |-- Efeito.java //Desafio da coordenação
 |   |-- Batalha.java
 |   |-- Jogo.java
 |
