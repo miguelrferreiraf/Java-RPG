@@ -11,6 +11,8 @@ Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente atrav�
 
 ## Diretório/*Directory*
 
+O arquivo Main.java coordena o uso das classes, que são todos os outros arquivos abaixo deste.
+
 ```
 Java RPG/  
 |-- .idea/
@@ -23,7 +25,7 @@ Java RPG/
 |   |-- Arqueiro.java
 |   |-- Inimigo.java
 |   |-- Habilidade.java
-|   |-- Efeito.java
+|   |-- Efeito.java //Pedido da coordenação
 |   |-- Batalha.java
 |   |-- Jogo.java
 |
