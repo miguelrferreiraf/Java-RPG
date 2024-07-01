@@ -9,6 +9,7 @@ Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente atrav√
 ## Diret√≥rio/*Directory*
 
 `
+
 Java RPG/  
 
 |-- .idea/
