@@ -5,7 +5,7 @@ prof.: Rannyer Thom (T-Academy)
 
 Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente através de princípios básicos de Programação Orientada ao Objeto a partir da linguagem de programação Java. Eeste trabalho foi feito para o processo seletivo disponibilizado pela T-Academy (T-Systems), em parceria com a ProWay.
 
-*This work refers to a project of a RPG game entirely made through basic principles of Oriented to Object Programming by the programmming language Java. This work was made for the selection process available by T-Academy (T-Systems), in partnership with ProWay*.
+*This work refers to a project of a RPG game entirely made through basic principles of Objected-oriented Programming by the programmming language Java. This work was made for the selection process available by T-Academy (T-Systems), in partnership with ProWay*.
 
 (01/07/2024)
 
