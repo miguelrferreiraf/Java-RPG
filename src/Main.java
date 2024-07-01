@@ -4,10 +4,33 @@ public class Main {
 
     public static void main(String[] args) {
         Jogo jogo = new Jogo();
-        jogo.criarPersonagens();
-        jogo.criarInimigos();
+
+        System.out.println("Escolha seu personagem:");
+        System.out.println("1. Guerreiro");
+        System.out.println("2. Mago");
+        System.out.println("3. Arqueiro");
 
         Scanner scanner = new Scanner(System.in);
+        int escolhaPersonagem = scanner.nextInt();
+
+        jogo.criarPersonagens();
+
+        switch (escolhaPersonagem) {
+            case 1:
+                jogo.escolherPersonagem("Guerreiro");
+                break;
+            case 2:
+                jogo.escolherPersonagem("Mago");
+                break;
+            case 3:
+                jogo.escolherPersonagem("Arqueiro");
+                break;
+            default:
+                System.out.println("Escolha inválida. Escolha um número de 1 a 3.");
+                break;
+        }
+
+        jogo.criarInimigos();
 
         // Loop para simular a batalha
         for (int turno = 1; turno <= 3; turno++) {

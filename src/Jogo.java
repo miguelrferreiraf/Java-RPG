@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Jogo {
     private ArrayList<Personagem> jogadores;
     private ArrayList<Inimigo> inimigos;
+    private Personagem personagemSelecionado;
 
     public Jogo() {
         this.jogadores = new ArrayList<>();
@@ -24,6 +25,17 @@ public class Jogo {
         Inimigo chefe = new Inimigo("Chefe", 120, 25, 20, "Chefe", 100);
         inimigos.add(monstro);
         inimigos.add(chefe);
+    }
+
+    public void escolherPersonagem(String nomePersonagem) {
+        for (Personagem personagem : jogadores) {
+            if (personagem.getNome().equals(nomePersonagem)) {
+                this.personagemSelecionado = personagem;
+                System.out.println("Você escolheu jogar com " + personagem.getNome() + ".");
+                return;
+            }
+        }
+        System.out.println("Personagem não encontrado.");
     }
 
     public void iniciarBatalha() {
