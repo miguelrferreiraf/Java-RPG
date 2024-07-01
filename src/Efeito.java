@@ -11,17 +11,21 @@ public class Efeito {
         switch (nome) {
             case "Envenenado":
                 personagem.receberDano(5); // Exemplo: toma 5 de dano a cada rodada
+                System.out.println(personagem.getNome() + " está envenenado!");
                 break;
             case "Atordoado":
                 // Implementação do efeito de atordoamento (ficar 1 turno sem atacar)
                 // Aqui você poderia definir alguma lógica para o atordoamento
+                System.out.println(personagem.getNome() + " está atordoado!");
                 break;
             case "Queimado":
                 personagem.receberDano(10); // Exemplo: toma 10 de dano a cada rodada
+                System.out.println(personagem.getNome() + " está queimando!");
                 break;
             case "Dormindo":
                 // Implementação do efeito de dormir (ficar X turnos sem atacar)
                 // Aqui você poderia definir alguma lógica para o personagem dormir
+                System.out.println(personagem.getNome() + " está dormindo!");
                 break;
             default:
                 break;

@@ -16,6 +16,11 @@ public class Jogo {
         jogadores.add(guerreiro);
         jogadores.add(mago);
         jogadores.add(arqueiro);
+
+        System.out.println("Personagens criados:");
+        for (Personagem personagem : jogadores) {
+            System.out.println("- " + personagem.getNome());
+        }
     }
 
     public void criarInimigos() {
@@ -23,6 +28,11 @@ public class Jogo {
         Inimigo chefe = new Inimigo("Chefe", 120, 25, 20, "Chefe", 100);
         inimigos.add(monstro);
         inimigos.add(chefe);
+
+        System.out.println("Inimigos criados:");
+        for (Inimigo inimigo : inimigos) {
+            System.out.println("- " + inimigo.getNome() + " (Tipo: " + inimigo.getTipo() + ")");
+        }
     }
 
     public void iniciarBatalha() {

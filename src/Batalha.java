@@ -8,11 +8,14 @@ public class Batalha {
     }
 
     public void realizarTurno() {
+        System.out.println("Novo turno iniciado.");
+
         for (Personagem personagem : personagens) {
             if (personagem.getPontosVida() > 0) {
                 Personagem alvo = selecionarAlvo(personagem);
                 if (alvo != null) {
                     personagem.atacar(alvo);
+                    System.out.println(personagem.getNome() + " atacou " + alvo.getNome() + "!");
                     // Outras ações possíveis durante o turno
                 }
             }
@@ -28,4 +31,3 @@ public class Batalha {
         return null;
     }
 }
-
