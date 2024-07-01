@@ -1,7 +1,9 @@
 # RPG Java (Java Full Stack/T-Academy)
 by Miguel Ferreira
 
-prof. Rannyer Thom
+prof.: Rannyer Thom (T-Academy)
+
+01/07/2024
 
 Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente através de princípios básicos de Programação Orientada ao Objeto a partir da linguagem de programação Java.
 
