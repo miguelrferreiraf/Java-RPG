@@ -8,16 +8,11 @@ Este trabalho refere-se a um projeto de um jogo de RPG feito inteiramente atrav�
 
 ## Diretório/*Directory*
 
-`
-
+```
 Java RPG/  
-
 |-- .idea/
-
 |-- out/   (diretório onde os arquivos compilados são armazenados)
-
 |-- src/
-
 |   |-- Main.java
 |   |-- Personagem.java
 |   |-- Guerreiro.java
@@ -32,4 +27,4 @@ Java RPG/
 |-- .gitignore (arquivo de descrição do projeto para o IntelliJ)
 |-- Java RPG.iml   
 |-- README.md   
-`
+```
